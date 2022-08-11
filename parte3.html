@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafío parte 3</title>
+    <style>
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: auto;
+            text-align: center;
+            width: 300px;
+        }
+        button{
+            margin: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+        <h2>Ingresa el password</h2>
+      <div>
+        <select name="pass1" id="num1">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+
+        <select name="pass2" id="num2">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+
+        <select name="pass3" id="num3">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+      </div>
+      <button onclick="verificar()">Ingresar</button>
+      <p class="mensaje"></p>
+    </div>
+
+    <script>
+        var valor1 = document.querySelector("#num1")
+        var valor2 = document.querySelector("#num2")
+        var valor3 = document.querySelector("#num3")
+        var mje = document.querySelector(".mensaje")
+        console.log(valor1.value)
+        function verificar(){
+            if(valor1.value + valor2.value + valor3.value == 911){
+                mje.innerHTML = "Password 1 correcto"
+            }else if(valor1.value == 7 && valor2.value == 1 && valor3.value == 4){
+                mje.innerHTML = "Password 2 correcto"
+            }else{
+                mje.innerHTML = "Password incorrecto"
+            }
+        }
+    </script>
+  </body>
+</html>

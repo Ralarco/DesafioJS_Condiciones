@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío parte 2</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-areas: 
+            "col1 col2 col3"
+            "mje mje mje";
+            gap: 10px;
+            padding: 50px;
+            align-items: flex-start;
+            
+        }
+
+        .cont1{
+            grid-area: col1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 5%;
+            background-color: rgb(235, 235, 235);
+        }
+
+        .cont2{
+            grid-area: col2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 5%;
+            background-color: rgb(235, 235, 235);
+        }
+
+        .cont3{
+            grid-area: col3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 5%;
+            background-color: rgb(235, 235, 235);
+        }
+
+        .mensaje {
+            grid-area: mje;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .miSticker{
+            width: 256px;
+            margin: 10px auto;
+            
+        }
+        input {
+            width: 80%;
+            border-radius: 5px;
+            border: solid 1px #CCC;
+            font-size: 1em;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        button {
+            width: 200px;
+            margin: auto;
+        }
+
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont1">
+        <img src="assets/img/sticker01.png" alt="" class="miSticker">
+        <input type="text" class="valor01">
+    </div>
+
+    <div class="cont2">
+        <img src="assets/img/sticker02.png" alt="" class="miSticker">
+        <input type="text" class="valor02">
+    </div>
+
+    <div class="cont3">
+        <img src="assets/img/sticker03.png" alt="" class="miSticker">
+        <input type="text" class="valor03">
+    </div>
+
+    <div class="mensaje">
+        <p class="mjeFinal"></p>
+        <button onclick="sumar()">Verificar</button>
+    </div>
+    
+    <script>
+        var valor1 = document.querySelector(".valor01")
+        var valor2 = document.querySelector(".valor02")
+        var valor3 = document.querySelector(".valor03")
+        var respuesta = document.querySelector(".mjeFinal")
+
+        function sumar(){
+            var suma = Number(valor1.value) + Number(valor2.value) + Number(valor3.value)
+            if(suma > 10){
+                respuesta.innerHTML = "Llevas demasiados stickers"
+                console.log(suma)
+            }else{
+                respuesta.innerHTML = `LLevas ` + suma + ` stickers`
+                console.log(suma)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Parte 1</title>
+</head>
+<body style="margin: 20px; text-align:center;">
+    <img src="https://placedog.net/500" alt="" class="imgPerro" onclick="cambiarBorde()">
+
+    <script>
+        var foto = document.querySelector('.imgPerro')
+        var borde = false
+        function cambiarBorde(){
+            if(borde == false){
+                foto.style.border = "solid 2px red"
+                borde = true;
+            }else if(borde == true){
+                foto.style.border = "none"
+                borde = false
+            }
+        }
+        
+    </script>
+</body>
+</html>
